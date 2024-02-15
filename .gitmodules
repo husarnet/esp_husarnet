@@ -1,0 +1,4 @@
+[submodule "husarnet"]
+	path = husarnet
+	url = https://github.com/husarnet/husarnet/
+	branch = port-esp32

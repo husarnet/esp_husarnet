@@ -1,0 +1,13 @@
+## IDF Component Manager Manifest File
+description: "Husarnet peer-to-peer VPN client for ESP-IDF"
+maintainers: "Milosz Lagan <milosz.lagan@husarion.com>"
+version: 0.0.1-alpha
+
+url: https://github.com/husarnet/esp_husarnet
+issues: https://github.com/husarnet/esp_husarnet/issues
+discussion: https://community.husarnet.com/
+
+dependencies:
+  espressif/libsodium: "^1.0.20~1"
+  idf:
+    version: ">=5.1.0" # TODO: check compatibility with older versions
