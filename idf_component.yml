@@ -1,6 +1,7 @@
 ## IDF Component Manager Manifest File
 description: "Husarnet peer-to-peer VPN client for ESP-IDF"
-maintainers: "Milosz Lagan <milosz.lagan@husarion.com>"
+maintainers:
+  - "Milosz Lagan <milosz.lagan@husarion.com>"
 version: 0.0.1-alpha
 
 url: https://github.com/husarnet/esp_husarnet
