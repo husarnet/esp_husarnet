@@ -49,11 +49,15 @@ void app_main(void) {
 
     ESP_LOGI(TAG, "Starting Husarnet client...");
 
+    // Initialize Husarnet client
     HusarnetClient* client = husarnet_init();
 
     // This function joins the network and blocks until the connection is established
     // Use join code obtained from the Husarnet Dashboard
     husarnet_join(client, "husarnet-esp32", "fc94:b01d:1803:8dd8:b293:5c7d:7639:932a/XXXXXXXXXXXXXXXXXXXXXX");
+
+    // Start the web server
+    start_webserver();
 
     while(1) {
         vTaskDelay(1000 / portTICK_PERIOD_MS);
