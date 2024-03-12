@@ -11,6 +11,7 @@
 #include "esp_wifi.h"
 #include "esp_log.h"
 #include "esp_http_server.h"
+#include "protocol_examples_common.h"
 
 #include "husarnet.h"
 
@@ -43,7 +44,8 @@ void app_main(void) {
     ESP_ERROR_CHECK(esp_netif_init());
     ESP_ERROR_CHECK(esp_event_loop_create_default());
     
-    wifi_init();
+    // Initialize WiFi or Ethernet, depending on the menuconfig configuration.
+    ESP_ERROR_CHECK(example_connect());
     // In order to reduce ping, power saving mode is disabled
     esp_wifi_set_ps(WIFI_PS_NONE);
 

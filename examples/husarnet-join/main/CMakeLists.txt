@@ -1,3 +1,3 @@
 idf_component_register(SRCS "husarnet-join.c"
                     INCLUDE_DIRS "."
-                    REQUIRES husarnet_core esp_wifi)
+                    REQUIRES esp_husarnet esp_wifi)

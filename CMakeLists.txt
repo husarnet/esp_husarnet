@@ -2,4 +2,4 @@
 set(CMAKE_SYSTEM_NAME Generic)
 
 # Build husarnet component using internal CMake build system
-include(${CMAKE_SOURCE_DIR}/husarnet/core/husarnet.cmake)
+include(${CMAKE_CURRENT_LIST_DIR}/husarnet/core/husarnet.cmake)
