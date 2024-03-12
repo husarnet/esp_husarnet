@@ -1,7 +1,5 @@
 # Husarnet for ESP-IDF
 
-# Husarnet Client
-
 ![Husarnet logo](images/logo.svg)
 
 Husarnet is a Peer-to-Peer VPN to connect your laptops, servers and microcontrollers over the Internet with zero configuration.
