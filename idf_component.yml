@@ -12,4 +12,4 @@ documentation: https://husarnet.com/docs/
 dependencies:
   espressif/libsodium: "^1.0.20~1"
   idf:
-    version: ">=5.0"
+    version: ">=4.4"
