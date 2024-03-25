@@ -2,7 +2,7 @@
 description: "Husarnet peer-to-peer VPN client for ESP-IDF"
 maintainers:
   - "Milosz Lagan <milosz.lagan@husarion.com>"
-version: 0.0.7
+version: 0.0.8
 
 url: https://github.com/husarnet/esp_husarnet
 issues: https://github.com/husarnet/esp_husarnet/issues
