@@ -12,6 +12,10 @@
 
 #include "husarnet.h"
 
+#define HOSTNAME  "husarnet-esp32"
+// Use join code obtained from the Husarnet Dashboard
+#define JOIN_CODE "fc94:b01d:1803:8dd8:b293:5c7d:7639:932a/XXXXXXXXXXXXXXXXXXXXXX"
+
 static const char *TAG = "main";
 
 void app_main(void) {    
@@ -28,8 +32,17 @@ void app_main(void) {
     HusarnetClient* client = husarnet_init();
 
     // This function joins the network and blocks until the connection is established
-    // Use join code obtained from the Husarnet Dashboard
-    husarnet_join(client, "husarnet-esp32", "fc94:b01d:1803:8dd8:b293:5c7d:7639:932a/XXXXXXXXXXXXXXXXXXXXXX");
+    husarnet_join(client, HOSTNAME, JOIN_CODE);
+
+    while (!husarnet_is_joined(client)) {
+        vTaskDelay(1000 / portTICK_PERIOD_MS);
+        ESP_LOGI(TAG, "Joining Husarnet network...");
+    }
+
+    // Get Husarnet IP address
+    char ip[HUSARNET_IP_STR_LEN];
+    husarnet_get_ip_address(client, ip, HUSARNET_IP_STR_LEN);
+    ESP_LOGI(TAG, "Husarnet IP address: %s", ip);
 
     while(1) {
         vTaskDelay(1000 / portTICK_PERIOD_MS);
