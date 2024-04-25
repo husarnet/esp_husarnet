@@ -4,7 +4,7 @@
 
 Husarnet is a Peer-to-Peer VPN to connect your laptops, servers and microcontrollers over the Internet with zero configuration.
 
-This library provides both C and C++ API. Detailed documentation is available in the [API documentation](API.md).
+This library provides both C and C++ API. More information is available in the [API documentation](https://husarnet.com/docs/library-api/).
 
 For a quick start with Husarnet Client, take a look at the webserver example in the `examples` directory or run:
 ```
