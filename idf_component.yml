@@ -2,7 +2,7 @@
 description: "Husarnet peer-to-peer VPN client for ESP-IDF"
 maintainers:
   - "Milosz Lagan <milosz.lagan@husarion.com>"
-version: 0.0.13
+version: 0.0.14
 
 url: https://github.com/husarnet/esp_husarnet
 issues: https://github.com/husarnet/esp_husarnet/issues
@@ -11,8 +11,4 @@ documentation: https://husarnet.com/docs/
 
 dependencies:
   espressif/libsodium:
-    version: "^1.0.20~1"
-    rules:
-      - if: "idf_version >=5.0"
-  idf:
-    version: ">=4.4"
+    version: "^1.0.20~2"
